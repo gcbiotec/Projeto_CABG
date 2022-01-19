@@ -4,9 +4,9 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+import tensorflow as tf
 
 #from keras.models import model_from_json
-from keras.models import model_from_json
 
 st.header('Calule o risco do paciente!')
 
@@ -56,7 +56,9 @@ st.markdown('---')
 json_file = open('modelo_noReLu_18.01.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
-loaded_model = model_from_json(loaded_model_json)
+
+#loaded_model = model_from_json(loaded_model_json)
+loaded_model = tf.keras.models.model_from_json(loaded_model_json)
 
 loaded_model.load_weights('modelo_noReLu_18.01.h5')
 
