@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 #from keras.models import model_from_json
+from keras.models import model_from_json
 
 st.header('Calule o risco do paciente!')
 
