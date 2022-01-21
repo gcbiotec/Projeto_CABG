@@ -49,7 +49,7 @@ dicionario = {'sexo': [x1],
 dados = pd.DataFrame(dicionario)
 dados = np.asarray(dados).astype('int64')
 
-st.write(dados)
+# st.write(dados)
 
 st.markdown('---')
 
